@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flutuante Binu's</title>
+  <meta name="description" content="Viva o melhor passeio de barco com conforto e exclusividade.">
+  <meta property="og:title" content="Flutuante Binu's">
+  <meta property="og:description" content="Um dia inesquecível em águas cristalinas.">
+  <meta property="og:image" content="img/teste.jpeg">
+  <meta property="og:type" content="website">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    .zoom-video { animation: zoomIn 20s ease-in-out infinite alternate; }
+    @keyframes zoomIn {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Hero -->
+  <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover zoom-video">
+      <source src="img/fundo.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <div class="relative z-10 p-8" data-aos="fade-up">
+      <img src="img/logo.jpg" alt="Flutuante Binu's" class="mx-auto w-32 mb-6 rounded-full shadow-lg border-4 border-[#4FC3F7]">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 text-[#4FC3F7]">Viva o Melhor Passeio de Barco</h1>
+      <p class="text-lg mb-6 text-gray-200">Um dia inesquecível em águas cristalinas com conforto e exclusividade.</p>
+      <div class="flex justify-center gap-4">
+        <a href="#contato" class="bg-[#4FC3F7] hover:bg-sky-400 text-[#005B96] py-3 px-6 rounded-full font-semibold transition">Reserve Agora</a>
+        <button id="openVideo" class="bg-white text-[#005B96] py-3 px-6 rounded-full font-semibold transition hover:bg-gray-200">▶ Ver Vídeo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal vídeo -->
+  <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+    <div class="bg-black rounded-lg overflow-hidden w-full max-w-3xl">
+      <iframe id="videoFrame" width="100%" height="480" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <button id="closeVideo" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
+  </div>
+
+  <!-- Informações -->
+  <section class="py-16 bg-gradient-to-b from-[#F5F8FA] to-white">
+    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 text-[#005B96]">Informações do Passeio</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-lg shadow-lg border-t-4 border-[#4FC3F7]">
+          <h3 class="text-xl font-semibold text-[#005B96]">Capacidade</h3>
+          <p>29 Pessoas</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-lg border-t-4 border-[#4FC3F7]">
+          <h3 class="text-xl font-semibold text-[#005B96]">Duração</h3>
+          <p>6 Horas</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-lg border-t-4 border-[#4FC3F7]">
+          <h3 class="text-xl font-semibold text-[#005B96]">Valor</h3>
+          <p>R$ 1.500,00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-center mb-8 text-[#005B96]">Galeria</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="img/teste.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer lightbox">
+        <img src="img/teste4.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer lightbox">
+        <img src="img/teste4.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer lightbox">
+        <img src="img/teste.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer lightbox">
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightboxModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+    <img id="lightboxImg" src="" class="max-w-full max-h-full rounded-lg shadow-lg">
+    <button id="closeLightbox" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
+  </div>
+
+  <!-- Roteiro -->
+  <section class="py-16 bg-[#F5F8FA]">
+    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-10 text-[#005B96]">Roteiro do Passeio</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+          <div class="text-5xl mb-4">🚤</div>
+          <h3 class="font-semibold text-lg">Saída</h3>
+          <p>Do porto às 9h</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+          <div class="text-5xl mb-4">🏝</div>
+          <h3 class="font-semibold text-lg">Parada</h3>
+          <p>Banho em águas cristalinas</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+          <div class="text-5xl mb-4">🍖</div>
+          <h3 class="font-semibold text-lg">Churrasco</h3>
+          <p>Tempo livre para relaxar</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+          <div class="text-5xl mb-4">🌅</div>
+          <h3 class="font-semibold text-lg">Retorno</h3>
+          <p>Às 15h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 text-[#005B96]">O que dizem nossos clientes</h2>
+      <div class="overflow-hidden relative">
+        <div id="testimonialCarousel" class="flex transition-transform duration-500">
+          <div class="min-w-full p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">⭐⭐⭐⭐⭐<p>"Experiência incrível, lugar maravilhoso!"</p><span>- Ana</span></div>
+          <div class="min-w-full p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">⭐⭐⭐⭐⭐<p>"Melhor passeio que já fiz na vida."</p><span>- Lucas</span></div>
+          <div class="min-w-full p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">⭐⭐⭐⭐⭐<p>"Voltarei com certeza, recomendo muito."</p><span>- Carla</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 text-center text-[#005B96]">Perguntas Frequentes</h2>
+      <div class="space-y-4">
+        <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
+          <summary class="font-semibold cursor-pointer">🍽 Posso levar minha própria comida?</summary>
+          <p class="mt-2 text-gray-700">Sim, você pode trazer comida e bebidas.</p>
+        </details>
+        <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
+          <summary class="font-semibold cursor-pointer">👶 O passeio é seguro para crianças?</summary>
+          <p class="mt-2 text-gray-700">Sim, recomendamos sempre supervisão de um adulto.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-16 bg-gradient-to-r from-[#005B96] to-[#003F66] text-white">
+    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-4 text-[#4FC3F7]">Reserve seu Passeio</h2>
+      <p class="mb-6">Entre em contato agora mesmo e garanta sua vaga!</p>
+      <a href="https://wa.me/5599999999999" target="_blank" class="bg-[#4FC3F7] text-[#005B96] py-3 px-6 rounded-full font-semibold transition hover:bg-sky-400">Chamar no WhatsApp</a>
+    </div>
+  </section>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Modal vídeo
+    document.getElementById('openVideo').onclick = () => {
+      document.getElementById('videoModal').classList.remove('hidden');
+      document.getElementById('videoFrame').src = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+    };
+    document.getElementById('closeVideo').onclick = () => {
+      document.getElementById('videoModal').classList.add('hidden');
+      document.getElementById('videoFrame').src = "";
+    };
+
+    // Lightbox
+    document.querySelectorAll('.lightbox').forEach(img => {
+      img.onclick = () => {
+        document.getElementById('lightboxImg').src = img.src;
+        document.getElementById('lightboxModal').classList.remove('hidden');
+      };
+    });
+    document.getElementById('closeLightbox').onclick = () => {
+      document.getElementById('lightboxModal').classList.add('hidden');
+    };
+
+    // Carrossel depoimentos
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#testimonialCarousel > div');
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      document.getElementById('testimonialCarousel').style.transform = `translateX(-${currentSlide * 100}%)`;
+    }, 4000);
+  </script>
+</body>
+</html>
