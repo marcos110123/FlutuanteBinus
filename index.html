@@ -37,7 +37,7 @@
       <p class="text-lg mb-6 text-gray-200">Um dia inesquecível em águas cristalinas com conforto e exclusividade.</p>
       <div class="flex justify-center gap-4">
         <a href="#contato" class="bg-[#4FC3F7] hover:bg-sky-400 text-[#005B96] py-3 px-6 rounded-full font-semibold transition">Reserve Agora</a>
-        <button id="openVideo" class="bg-white text-[#005B96] py-3 px-6 rounded-full font-semibold transition hover:bg-gray-200">▶ Ver Vídeo</button>
+        
       </div>
     </div>
   </section>
@@ -50,6 +50,21 @@
     <button id="closeVideo" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
   </div>
 
+
+    <!-- Sobre Nós -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
+      <img src="img/logo.jpg" alt="Equipe" class="rounded-lg shadow-lg">
+      <div>
+        <h2 class="text-3xl font-bold text-[#005B96] mb-4">Sobre Nós</h2>
+        <p class="mb-4">Com mais de 15 anos proporcionando experiências inesquecíveis, a equipe do Flutuante Binu’s é formada por profissionais apaixonados pelo Rio. Nosso compromisso é oferecer conforto, segurança e momentos únicos em cada passeio.</p>
+        <div class="flex items-center gap-3">
+          <img src="img/logo.jpg" alt="Selo de Qualidade" class="w-16">
+          <span class="font-semibold">Qualidade Garantida & Experiência Comprovada</span>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Informações -->
   <section class="py-16 bg-gradient-to-b from-[#F5F8FA] to-white">
     <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
@@ -119,45 +134,107 @@
     </div>
   </section>
 
-  <!-- Depoimentos -->
-  <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-8 text-[#005B96]">O que dizem nossos clientes</h2>
-      <div class="overflow-hidden relative">
-        <div id="testimonialCarousel" class="flex transition-transform duration-500">
-          <div class="min-w-full p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">⭐⭐⭐⭐⭐<p>"Experiência incrível, lugar maravilhoso!"</p><span>- Ana</span></div>
-          <div class="min-w-full p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">⭐⭐⭐⭐⭐<p>"Melhor passeio que já fiz na vida."</p><span>- Lucas</span></div>
-          <div class="min-w-full p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">⭐⭐⭐⭐⭐<p>"Voltarei com certeza, recomendo muito."</p><span>- Carla</span></div>
+<!-- Mapa Interativo -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 text-[#005B96]">📍 Localização</h2>
+    <p class="mb-8 text-gray-700 max-w-2xl mx-auto">
+      Nosso passeio sai do <strong>Porto Principal</strong> e inclui paradas estratégicas em praias paradisíacas, 
+      como a <strong>Praia do Cervinho</strong> em Sales, SP.
+    </p>
+    <div class="overflow-hidden rounded-lg shadow-lg">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1478.1234567890123!2d-49.498123!3d-21.341255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDIwJzMxLjUiUyA0OcKwMjknMDguNiJX!5e0!3m2!1spt-BR!2sbr!4v0000000000000"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- Dicas para o Passeio -->
+<section class="py-16 bg-[#F5F8FA]">
+  <div class="max-w-6xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8 text-[#005B96]">💡 Dicas para o Passeio</h2>
+    <div class="grid md:grid-cols-2 gap-6 text-lg">
+      <div class="bg-white rounded-lg shadow p-5 flex items-start gap-3">
+        <span class="text-2xl">🧴</span> <p>Leve protetor solar e chapéu para se proteger do sol.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-5 flex items-start gap-3">
+        <span class="text-2xl">👕</span> <p>Use roupas leves e confortáveis para aproveitar ao máximo.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-5 flex items-start gap-3">
+        <span class="text-2xl">💧</span> <p>Mantenha-se hidratado durante todo o passeio.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-5 flex items-start gap-3">
+        <span class="text-2xl">🛟</span> <p>Siga todas as orientações da equipe para sua segurança.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Depoimentos -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-8 text-[#005B96]">💬 O que dizem nossos clientes</h2>
+    <div class="overflow-hidden relative rounded-lg shadow-lg">
+      <div id="testimonialCarousel" class="flex transition-transform duration-500">
+        <div class="min-w-full p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
+          <p class="text-2xl">⭐⭐⭐⭐⭐</p>
+          <p class="italic">"Experiência incrível, lugar maravilhoso!"</p>
+          <span class="block mt-2 font-semibold">- Ana</span>
+        </div>
+        <div class="min-w-full p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
+          <p class="text-2xl">⭐⭐⭐⭐⭐</p>
+          <p class="italic">"Melhor passeio que já fiz na vida."</p>
+          <span class="block mt-2 font-semibold">- Lucas</span>
+        </div>
+        <div class="min-w-full p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
+          <p class="text-2xl">⭐⭐⭐⭐⭐</p>
+          <p class="italic">"Voltarei com certeza, recomendo muito."</p>
+          <span class="block mt-2 font-semibold">- Carla</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FAQ -->
-  <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-8 text-center text-[#005B96]">Perguntas Frequentes</h2>
-      <div class="space-y-4">
-        <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
-          <summary class="font-semibold cursor-pointer">🍽 Posso levar minha própria comida?</summary>
-          <p class="mt-2 text-gray-700">Sim, você pode trazer comida e bebidas.</p>
-        </details>
-        <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
-          <summary class="font-semibold cursor-pointer">👶 O passeio é seguro para crianças?</summary>
-          <p class="mt-2 text-gray-700">Sim, recomendamos sempre supervisão de um adulto.</p>
-        </details>
-      </div>
+<!-- FAQ -->
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-8 text-center text-[#005B96]">❓ Perguntas Frequentes</h2>
+    <div class="space-y-4">
+      <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
+        <summary class="font-semibold cursor-pointer">🍽 Posso levar minha própria comida?</summary>
+        <p class="mt-2 text-gray-700">Sim, você pode trazer comida e bebidas à vontade.</p>
+      </details>
+      <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
+        <summary class="font-semibold cursor-pointer">👶 O passeio é seguro para crianças?</summary>
+        <p class="mt-2 text-gray-700">Sim, mas recomendamos sempre a supervisão de um adulto responsável.</p>
+      </details>
+      <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
+        <summary class="font-semibold cursor-pointer">💳 Quais as formas de pagamento?</summary>
+        <p class="mt-2 text-gray-700">Aceitamos PIX, cartão de crédito e débito.</p>
+      </details>
+      <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
+        <summary class="font-semibold cursor-pointer">☔ E se chover?</summary>
+        <p class="mt-2 text-gray-700">O passeio poderá ser remarcado sem custos adicionais.</p>
+      </details>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contato -->
-  <section id="contato" class="py-16 bg-gradient-to-r from-[#005B96] to-[#003F66] text-white">
-    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-4 text-[#4FC3F7]">Reserve seu Passeio</h2>
-      <p class="mb-6">Entre em contato agora mesmo e garanta sua vaga!</p>
-      <a href="https://wa.me/5599999999999" target="_blank" class="bg-[#4FC3F7] text-[#005B96] py-3 px-6 rounded-full font-semibold transition hover:bg-sky-400">Chamar no WhatsApp</a>
-    </div>
-  </section>
+<!-- Contato -->
+<section id="contato" class="py-20 bg-gradient-to-r from-[#005B96] to-[#003F66] text-white">
+  <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-4 text-[#4FC3F7]">🚤 Reserve seu Passeio</h2>
+    <p class="mb-8 text-lg">Entre em contato agora mesmo e garanta sua vaga para viver essa experiência única!</p>
+    <a href="https://wa.me/5599999999999" target="_blank" class="bg-[#4FC3F7] text-[#005B96] py-4 px-8 rounded-full font-semibold transition hover:bg-sky-400 text-lg shadow-lg">
+      💬 Chamar no WhatsApp
+    </a>
+  </div>
+</section>
+
 
   <script>
     AOS.init({ duration: 1000, once: true });
@@ -191,5 +268,53 @@
       document.getElementById('testimonialCarousel').style.transform = `translateX(-${currentSlide * 100}%)`;
     }, 4000);
   </script>
+
+  <!-- Footer -->
+<footer class="bg-[#003F66] text-white py-10">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-4">
+    
+    <!-- Sobre -->
+    <div>
+      <img src="img/logo.jpg" alt="Flutuante Binu's" class="w-20 h-20 rounded-full mb-4 border-2 border-[#4FC3F7]">
+      <p class="text-sm leading-relaxed">
+        Flutuante Binu’s oferece experiências únicas em águas cristalinas, com conforto, segurança e diversão garantida. Mais de 15 anos levando alegria para nossos clientes.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div>
+      <h3 class="font-bold text-lg mb-3 text-[#4FC3F7]">Links Úteis</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#sobre" class="hover:underline">Sobre Nós</a></li>
+        <li><a href="#galeria" class="hover:underline">Galeria</a></li>
+        <li><a href="#roteiro" class="hover:underline">Roteiro</a></li>
+        <li><a href="#faq" class="hover:underline">Perguntas Frequentes</a></li>
+        <li><a href="#contato" class="hover:underline">Contato</a></li>
+        <li><a href="#" class="hover:underline">Política de Privacidade</a></li>
+        <li><a href="#" class="hover:underline">Termos de Uso</a></li>
+      </ul>
+    </div>
+
+    <!-- Contato -->
+    <div>
+      <h3 class="font-bold text-lg mb-3 text-[#4FC3F7]">Contato</h3>
+      <p class="text-sm">📍 Porto Principal, Praia do Cervinho, Sales - SP</p>
+      <p class="text-sm">📞 (99) 99999-9999</p>
+      <p class="text-sm">✉ contato@flutuantebinus.com</p>
+      <div class="flex gap-4 mt-3">
+        <a href="https://www.instagram.com/flutuantebinus" target="_blank" class="hover:text-[#4FC3F7] text-xl">📸</a>
+        <a href="https://wa.me/5599999999999" target="_blank" class="hover:text-[#4FC3F7] text-xl">💬</a>
+        <a href="#" target="_blank" class="hover:text-[#4FC3F7] text-xl">👍</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Direitos Autorais -->
+  <div class="border-t border-gray-600 mt-8 pt-4 text-center text-sm text-gray-400">
+    © 2025 Flutuante Binu's - Todos os direitos reservados.
+  </div>
+</footer>
+
 </body>
 </html>

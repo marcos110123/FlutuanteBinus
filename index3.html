@@ -4,124 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flutuante Binu's</title>
+  <meta name="description" content="Viva o melhor passeio de barco com conforto e exclusividade.">
+  <meta property="og:title" content="Flutuante Binu's">
+  <meta property="og:description" content="Um dia inesquecível em águas cristalinas.">
+  <meta property="og:image" content="img/teste.jpeg">
+  <meta property="og:type" content="website">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; }
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    .zoom-video { animation: zoomIn 20s ease-in-out infinite alternate; }
+    @keyframes zoomIn { from { transform: scale(1); } to { transform: scale(1.05); } }
   </style>
 </head>
 <body class="bg-white text-gray-800">
 
   <!-- Hero -->
-  <section class="relative h-screen flex items-center justify-center text-center text-white">
-    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+  <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover zoom-video">
       <source src="img/fundo.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-
     <div class="relative z-10 p-8" data-aos="fade-up">
       <img src="img/logo.jpg" alt="Flutuante Binu's" class="mx-auto w-32 mb-6 rounded-full shadow-lg border-4 border-[#4FC3F7]">
       <h1 class="text-4xl md:text-6xl font-bold mb-4 text-[#4FC3F7]">Viva o Melhor Passeio de Barco</h1>
       <p class="text-lg mb-6 text-gray-200">Um dia inesquecível em águas cristalinas com conforto e exclusividade.</p>
-      <a href="#contato" class="bg-[#4FC3F7] hover:bg-sky-400 text-[#005B96] py-3 px-6 rounded-full font-semibold transition">Reserve Agora</a>
-    </div>
-  </section>
-
-  <!-- Informações -->
-  <section class="py-16 bg-gradient-to-b from-[#F5F8FA] to-white">
-    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-8 text-[#005B96]">Informações do Passeio</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white rounded-lg shadow-lg border-t-4 border-[#4FC3F7]">
-          <h3 class="text-xl font-semibold text-[#005B96]">Capacidade</h3>
-          <p>29 Pessoas</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow-lg border-t-4 border-[#4FC3F7]">
-          <h3 class="text-xl font-semibold text-[#005B96]">Duração</h3>
-          <p>6 Horas</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow-lg border-t-4 border-[#4FC3F7]">
-          <h3 class="text-xl font-semibold text-[#005B96]">Valor</h3>
-          <p>R$ 1.500,00</p>
-        </div>
+      <div class="flex justify-center gap-4">
+        <a href="#contato" class="bg-[#4FC3F7] hover:bg-sky-400 text-[#005B96] py-3 px-6 rounded-full font-semibold transition">Reserve Agora</a>
+        <button id="openVideo" class="bg-white text-[#005B96] py-3 px-6 rounded-full font-semibold transition hover:bg-gray-200">▶ Ver Vídeo</button>
       </div>
     </div>
   </section>
 
-  <!-- Galeria -->
+  <!-- Sobre Nós -->
   <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-center mb-8 text-[#005B96]">Galeria</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="img/teste.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="img/teste4.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="img/teste4.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="img/teste.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
+      <img src="img/equipe.jpg" alt="Equipe" class="rounded-lg shadow-lg">
+      <div>
+        <h2 class="text-3xl font-bold text-[#005B96] mb-4">Sobre Nós</h2>
+        <p class="mb-4">Com mais de 15 anos proporcionando experiências inesquecíveis, a equipe do Flutuante Binu’s é formada por profissionais apaixonados pelo mar. Nosso compromisso é oferecer conforto, segurança e momentos únicos em cada passeio.</p>
+        <div class="flex items-center gap-3">
+          <img src="img/selo.png" alt="Selo de Qualidade" class="w-16">
+          <span class="font-semibold">Qualidade Garantida & Experiência Comprovada</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Roteiro -->
+  <!-- Inclui no Passeio -->
   <section class="py-16 bg-[#F5F8FA]">
-    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-6 text-[#005B96]">Roteiro do Passeio</h2>
-      <ul class="space-y-4 text-lg">
-        <li>🚤 Saída do porto às 9h</li>
-        <li>🏝 Parada para banho em águas cristalinas</li>
-        <li>🍖 Tempo livre para churrasco e relaxamento</li>
-        <li>🌅 Retorno às 15h</li>
+    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 text-[#005B96]">Inclui no Passeio</h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="text-4xl mb-3">🍹</div>
+          <p>Bebidas geladas</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="text-4xl mb-3">🍖</div>
+          <p>Churrasco completo</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="text-4xl mb-3">🎶</div>
+          <p>Música ambiente</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="text-4xl mb-3">🛟</div>
+          <p>Equipamentos de segurança</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa Interativo -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 text-[#005B96]">Localização e Roteiro</h2>
+      <p class="mb-6">Saída do porto principal com paradas estratégicas em praias paradisíacas.</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Dicas para o Passeio -->
+  <section class="py-16 bg-[#F5F8FA]">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-center mb-8 text-[#005B96]">Dicas para o Passeio</h2>
+      <ul class="space-y-3 text-lg list-disc list-inside">
+        <li>Leve protetor solar e chapéu.</li>
+        <li>Use roupas leves e confortáveis.</li>
+        <li>Hidrate-se bastante.</li>
+        <li>Siga as orientações da equipe para sua segurança.</li>
       </ul>
     </div>
   </section>
 
-  <!-- Depoimentos -->
+  <!-- Redes Sociais -->
   <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-8 text-[#005B96]">O que dizem nossos clientes</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
-          ⭐⭐⭐⭐⭐
-          <p>"Experiência incrível, lugar maravilhoso!"</p>
-          <span class="text-sm text-gray-600">- Ana</span>
-        </div>
-        <div class="p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
-          ⭐⭐⭐⭐⭐
-          <p>"Melhor passeio que já fiz na vida."</p>
-          <span class="text-sm text-gray-600">- Lucas</span>
-        </div>
-        <div class="p-6 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
-          ⭐⭐⭐⭐⭐
-          <p>"Voltarei com certeza, recomendo muito."</p>
-          <span class="text-sm text-gray-600">- Carla</span>
-        </div>
+      <h2 class="text-3xl font-bold mb-8 text-[#005B96]">Nos Siga no Instagram</h2>
+      <div class="mb-6">
+        <a href="https://instagram.com/seuinstagram" target="_blank" class="bg-[#4FC3F7] text-[#005B96] py-2 px-4 rounded-full hover:bg-sky-400">📸 Seguir no Instagram</a>
       </div>
+      <iframe src="https://snapwidget.com/embed/123456" class="w-full" height="300" frameborder="0"></iframe>
     </div>
   </section>
 
-  <!-- Mapa -->
-  <section class="py-16 bg-[#F5F8FA]">
-    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-8 text-[#005B96]">Localização</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <!-- FAQ -->
+  <!-- FAQ Completo -->
   <section class="py-16 bg-white">
     <div class="max-w-4xl mx-auto" data-aos="fade-up">
       <h2 class="text-3xl font-bold mb-8 text-center text-[#005B96]">Perguntas Frequentes</h2>
-      <div class="space-y-4">
-        <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
-          <summary class="font-semibold cursor-pointer">Posso levar minha própria comida?</summary>
-          <p class="mt-2 text-gray-700">Sim, você pode trazer comida e bebidas.</p>
-        </details>
-        <details class="p-4 bg-[#F5F8FA] rounded-lg shadow border-l-4 border-[#4FC3F7]">
-          <summary class="font-semibold cursor-pointer">O passeio é seguro para crianças?</summary>
-          <p class="mt-2 text-gray-700">Sim, recomendamos sempre supervisão de um adulto.</p>
-        </details>
-      </div>
+      <details class="p-4 bg-[#F5F8FA] rounded-lg shadow mb-4"><summary class="font-semibold">Quais as formas de pagamento?</summary><p class="mt-2">Aceitamos PIX, cartão de crédito e débito.</p></details>
+      <details class="p-4 bg-[#F5F8FA] rounded-lg shadow mb-4"><summary class="font-semibold">Qual a política de cancelamento?</summary><p class="mt-2">Cancelamentos com até 48h de antecedência terão reembolso integral.</p></details>
+      <details class="p-4 bg-[#F5F8FA] rounded-lg shadow mb-4"><summary class="font-semibold">O que acontece em caso de chuva?</summary><p class="mt-2">O passeio poderá ser reagendado para outra data.</p></details>
     </div>
   </section>
 
@@ -130,12 +125,49 @@
     <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
       <h2 class="text-3xl font-bold mb-4 text-[#4FC3F7]">Reserve seu Passeio</h2>
       <p class="mb-6">Entre em contato agora mesmo e garanta sua vaga!</p>
-      <a href="https://wa.me/5517996045305" target="_blank" class="bg-[#4FC3F7] text-[#005B96] py-3 px-6 rounded-full font-semibold transition hover:bg-sky-400">Chamar no WhatsApp</a>
+      <a href="https://wa.me/5599999999999" target="_blank" class="bg-[#4FC3F7] text-[#005B96] py-3 px-6 rounded-full font-semibold transition hover:bg-sky-400">Chamar no WhatsApp</a>
     </div>
   </section>
 
+  <!-- Rodapé -->
+  <footer class="bg-[#003F66] text-white py-10">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-bold text-lg mb-3">Flutuante Binu's</h3>
+        <p>Endereço: Porto Principal, Cidade/UF</p>
+        <p>Telefone: (99) 99999-9999</p>
+        <p>Email: contato@flutuantebinus.com</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-3">Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Política de Privacidade</a></li>
+          <li><a href="#" class="hover:underline">Termos de Uso</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-3">Contato Rápido</h3>
+        <form class="space-y-3">
+          <input type="text" placeholder="Seu nome" class="w-full p-2 rounded text-black">
+          <input type="email" placeholder="Seu e-mail" class="w-full p-2 rounded text-black">
+          <textarea placeholder="Sua mensagem" class="w-full p-2 rounded text-black"></textarea>
+          <button type="submit" class="bg-[#4FC3F7] text-[#005B96] px-4 py-2 rounded hover:bg-sky-400">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div class="text-center mt-6 text-sm">© 2025 Flutuante Binu's - Todos os direitos reservados.</div>
+  </footer>
+
   <script>
     AOS.init({ duration: 1000, once: true });
+    document.getElementById('openVideo').onclick = () => {
+      document.getElementById('videoModal').classList.remove('hidden');
+      document.getElementById('videoFrame').src = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+    };
+    document.getElementById('closeVideo').onclick = () => {
+      document.getElementById('videoModal').classList.add('hidden');
+      document.getElementById('videoFrame').src = "";
+    };
   </script>
 </body>
 </html>
