@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flutuantebinus.com.br/sitemap.xml
